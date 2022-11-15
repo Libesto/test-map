@@ -1,13 +1,13 @@
 <template>
   <ol-map class="container" loadTilesWhileAnimating loadTilesWhileInteracting>
-    <ol-view ref="view" :center="center" :rotation="rotation" :zoom="zoom" :projection="projection" />
+    <ol-view ref="view" :center="center" :rotation="rotation" :zoom="zoom" />
 
     <ol-tile-layer>
       <ol-source-osm />
     </ol-tile-layer>
 
     <ol-vector-layer>
-      <ol-source-vector :url="url" :format="geoJson" :projection="projection" />
+      <ol-source-vector :url="url" :format="geoJson" />
 
       <ol-style>
         <ol-style-stroke color="rgba(0,0,0,0.25)" :width="1" />
@@ -36,9 +36,8 @@ import {ref, inject} from 'vue';
 
 export default {
   setup() {
-    const center = ref([40, 40]);
-    const projection = ref('EPSG:4326');
-    const zoom = ref(8);
+    const center = ref([3986645.825390251, 4661429.735778625]);
+    const zoom = ref(6);
     const rotation = ref(0);
 
     const format = inject('ol-format');
@@ -69,7 +68,6 @@ export default {
 
     return {
       center,
-      projection,
       zoom,
       rotation,
       url,

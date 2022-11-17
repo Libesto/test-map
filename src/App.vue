@@ -2,9 +2,9 @@
   <nav class="navigation">
     <RouterLink to="/">Home</RouterLink>
     |
-    <RouterLink to="/page-1">Page 1</RouterLink>
+    <RouterLink to="/page-1">OpenLayers</RouterLink>
     |
-    <RouterLink to="/page-2">Page 2</RouterLink>
+    <RouterLink to="/page-2">Leaflet</RouterLink>
   </nav>
 
   <RouterView />

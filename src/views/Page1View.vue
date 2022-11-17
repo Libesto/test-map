@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <h1>Page 1</h1>
-    <Map />
+    <h1>Using OpenLayers</h1>
+    <OpenLayersMap />
   </div>
 </template>
 
 <script>
-import Map from '@/components/Map.vue';
+import OpenLayersMap from '@/components/OpenLayersMap.vue';
 
 export default {
-  components: {Map}
+  components: {OpenLayersMap}
 };
 </script>
 
